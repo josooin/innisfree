@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detecion" content="telephone=no">
+  <title>이니스프리 반응형 웹-메인페이지</title>
+  <!-- 1. reset -->
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+
+  <!-- 2. base -->
+  <link rel="stylesheet" href="./css/base.css" type="text/css">
+
+  <!-- 3. 공통서식 header, footer 공통서식 -->
+  <!-- <link href="./css/common.css" rel="stylesheet" type="text/css"> -->
+
+  <!-- 4. mobile해상도에 맞는 서식 (기준서식) -->
+  <link href="./css/mobile.css" rel="stylesheet" type="text/css">
+
+  <!-- 5. tablet해상도에 맞는 서식 -->
+  <!-- <link href="./css/tablet.css" rel="stylesheet" type="text/css"> -->
+
+  <!-- 6. pc해상도에 맞는 서식 -->
+  <!-- <link href="./css/pc.css" rel="stylesheet" type="text/css"> -->
+
+  <!-- 슬라이드 서식  -->
+  <link rel="stylesheet" href="./css/swiper.css" type="text/css">
+
+  <!-- 슬라이드 제이쿼리 스크립트 -->
+  <script src="./script/swiper.js"></script>
+
+  <!-- 제이쿼리 라이브러리 연결하기 -->
+  <script src="./script/jquery-3.7.1.js"></script>
+
+  <!-- 제이쿼리 라이브러리 연결하기 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+  <!-- 제이쿼리 내용 작성하기(랩퍼) --> 
+
+  <!-- 폰트어썸 아이콘폰트 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  
+
+</head>
+<body>
+  <form name="search" method="post" action="search.php">
+  <input type="checkbox" id="toggle">
+    <!-- 헤더 영역 -->
+  <header>
+    <div class="h_top">
+      <!-- 상단 로고 -->
+      <h1>
+        <a href="index.html" title="메인페이지로 바로가기"><img src="./images/logo.png" alt="상단로고"></a>
+      </h1>
+
+      <!-- 검색폼 -->
+      <p class="btn_search">
+        <a href="javascript:void(0);"><img alt="통합검색" src="./images/search_img.png"></a>
+      <!-- <label for="totalSearch" class="a11y">통합검색</label><input id="totalSearch" placeholder="통합검색" type="text"> -->
+      </p>
+      
+      <!-- 장바구니 -->
+      <li><a href="cart.html" title="장바구니"><img src="./images/cart_img.png" alt="장바구니" class="cart_btn"></a></li>
+
+      <!-- 마이페이지 -->
+      <li><a href="마이페이지" title="로그인페이지"><img src="./images/login_img.png" alt="로그인페이지" class="login_btn"></a></li>
+      
+      <!-- 카테고리 -->
+      <label for="toggle" class="total_btn">
+        <img src="./images/menu_img.png" alt="카테고리 메뉴바">
+      </label>
+    </div>
+
+    <div class="h_bottom">
+      <nav class="gnb">
+        <label for="toggle" class="c_btn"><i class="fas fa-times"></i></label>
+        <ul>
+          <li><a href="skincare.html" title="스킨케어">스킨케어<i class='fas fa-angle-down'></i></a>
+            <ul class="sub">
+              <li><a href="skincare01.html" title="에센스/세럽/앰플">에센스/세럽/앰플</a></li>
+              <li><a href="skincare02.html" title="로션/크림">로션/크림</a></li>
+              <li><a href="skincare03.html" title="스킨/토너/미스트">스킨/토너/미스트</a></li>
+              <li><a href="skincare04.html" title="선케어">선케어</a></li>
+              <li><a href="skincare04.html" title="클렌징">클렌징</a></li>
+              <li><a href="skincare05.html" title="팩/마스크">팩/마스크</a></li>
+              <li><a href="skincare06.html" title="립/마스크">립/마스크</a></li>
+              <li><a href="skincare07.html" title="오일/마사지">오일/마사지</a></li>
+              <li><a href="skincare08.html" title="기획세트">기획세트</a></li>
+              <li><a href="skincare09.html" title="기타">기타</a></li>
+            </ul>
+          </li>
+
+          <li><a href="makeup.html" title="메이크업">메이크업<i class='fas fa-angle-down'></i></a>
+            <ul class="sub">
+              <li><a href="makeup01.html" title="페이스메이크업">페이스메이크업</a></li>
+              <li><a href="makeup02.html" title="아이메이크업">아이메이크업</a></li>
+              <li><a href="makeup03.html" title=립메이크업">립메이크업</a></li>
+              <li><a href="makeup04.html" title=네일">네일</a></li>
+            </ul>
+          </li>
+
+          <li><a href="man.html" title="남성">남성<i class='fas fa-angle-down'></i></a>
+            <ul class="sub">
+              <li><a href="man01.html" title="스킨케어">스킨케어</a></li>
+              <li><a href="man02.html" title="클렌징">클렌징</a></li>
+              <li><a href="man03.html" title=기획세트">기획세트</a></li>
+            </ul>
+          </li>
+
+          <li><a href="hbp.html" title="헤어/바디/펫">헤어/바디/펫<i class='fas fa-angle-down'></i></a>
+            <ul class="sub">
+              <li><a href="hbp01.html" title="펫">펫</a></li>
+              <li><a href="hbp02.html" title="핸드/풋케어">핸드/풋케어</a></li>
+              <li><a href="hbp03.html" title=바디로션/미스트">바디 로션/미스트</a></li>
+              <li><a href="hbp04.html" title=바디워시/미스트">바디 워시/청결제</a></li>
+            </ul>
+          </li>
+          
+          <li><a href="s_set.html" title="기획세트">기획세트<i class='fas fa-angle-down'></i></a>
+            <ul class="sub">
+              <li><a href="s_set01.html" title="기획세트">기획세트</a></li>
+            </ul>
+          </li>
+          
+          <li><a href="props.html" title="미용소품">미용소품<i class='fas fa-angle-down'></i></a>
+            <ul class="sub">
+              <li><a href="props01.html" title="브러시">브러시</a></li>
+              <li><a href="props02.html" title="네일소품">네일소품</a></li>
+              <li><a href="props03.html" title="헤어/바디소품">헤어/바디소품</a></li>
+              <li><a href="props04.html" title="퍼프/스펀지">퍼프/스펀지</a></li>
+              <li><a href="props05.html" title="화장솜/면봉/기름종이">화장솜/면봉/기름종이</a></li>
+              <li><a href="props06.html" title="클렌징소품">클렌징 소품</a></li>
+              <li><a href="props07.html" title="기타소품">기타 소품</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- 메인 영역 -->
+  <main>
+    <nav class="main_nav">
+      <ul>
+        <li><a href="#" title="브랜드">브랜드</a></li>
+        <li><a href="#" title="제품소개">제품소개</a></li>
+        <li><a href="#" title="이벤트">이벤트</a></li>
+        <li><a href="#" title="스킨케어">스킨케어</a></li>
+        <li><a href="#" title="메이크업">메이크업</a></li>
+        <li><a href="#" title="공지사항">공지사항</a></li> 
+      </ul>
+    </nav>
+    <script>
+      $(document).ready(function(){
+  
+        let main_nav = $('main > .main_nav > ul > li > a');
+  
+        main_nav.each(function(){ 
+          $(this).click(function(){
+  
+            $(this).css('border-bottom','3px solid #333').parent().siblings().find('a').css('border-bottom','#fff');
+  
+            return false;
+          });
+        });
+      });
+    </script>
+
+    <!-- 유튜브영상 -->
+    <iframe width="375" height="210" src="https://www.youtube.com/embed/m2XAD6NqlfM?si=WClofCO6x-XvY5g7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="youtube"></iframe>
+
+    <!-- 메인컨텐츠 1 -->
+    <div class="b_story">
+      <a href="brandstory.html" title="브랜드스토리 페이지 바로가기">
+        <h2>BRAND STORY</h2>
+        <div class="main_cnt1">
+          <li><img src="./images/c_img1.png" alt="브랜드스토리 이미지1"></li>
+          <li><img src="./images/c_img2.png" alt="브랜드스토리 이미지2"></li>
+        </div>
+        
+        <p class="b_story_t1">Enjoy being you,<br>
+          Be free with INNISFREE<br><br></p>
+        <p class="b_story_t2">이니스프리와 함께 겉으로 보이는 아름다움을 넘어<br>
+          당신의 모든 아름다운 찰나를 발견해보세요.</p>
+      </a>
+    </div>
+
+    <!-- 메인컨텐츠 2 -->
+    <div class="n_best">
+      <h2><a href="now_best.html" title="지금 제일 잘나가요 바로가기">지금 제일 잘나가요</a></h2>
+    <nav class="cnt2">
+      <ul class="cnt2_top">
+        <li class="cnt2_nav"><a href="#" title="전체">전체</a></li>
+        <li class="cnt2_nav"><a href="#" title="스킨케어">스킨케어</a></li>
+        <li class="cnt2_nav"><a href="#" title="메이크업">메이크업</a></li>
+        <li class="cnt2_nav"><a href="#" title="헤어/바디/펫">헤어/바디/펫</a></li>
+        <li class="cnt2_nav"><a href="#" title="미용소품">미용소품</a></li>
+      </ul>
+      <script>
+        $(document).ready(function(){
+
+          let cnt2 = $('.cnt2 > .cnt2_top > li > a');
+
+          cnt2.each(function(){
+            $(this).click(function(){
+              $(this).css('color','#000').css('background','#fff').css('border','1px solid #000').parent().siblings().find('a').css('color','#999E9C').css('background','#F5F5F5').css('border','1px solid #f5f5f5');
+              return false;
+            });
+          });
+
+
+        });
+      </script>
+
+
+      <ul class="cnt2_gallery">
+        <li class="cnt2_b_1">
+          <a href="">
+            <img src="./images/cnt2_1.jpg" alt="이미지 1">
+            <ul>
+              <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
+              <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
+              <li>&#x2605; 4.9 (8,558)</li>
+            </ul>
+          </a> 
+        </li>
+
+        <li class="cnt2_b_1">
+          <a href="">
+            <img src="./images/cnt2_2.png" alt="이미지 2">
+            <ul>
+              <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
+              <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
+              <li>&#x2605; 4.9 (8,558)</li>
+            </ul>
+          </a> 
+        </li>
+
+        <li class="cnt2_b_1">
+          <a href="">
+            <img src="./images/cnt2_3.png" alt="이미지 3">
+            <ul>
+              <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
+              <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
+              <li>&#x2605; 4.9 (8,558)</li>
+            </ul>
+          </a> 
+        </li>
+
+        <li class="cnt2_b_1">
+          <a href="">
+            <img src="./images/cnt2_4.jpg" alt="이미지 4">
+            <ul>
+              <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
+              <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
+              <li>&#x2605; 4.9 (8,558)</li>
+            </ul>
+          </a> 
+        </li>
+
+
+
+        <li class="cnt2_b_1">
+          <a href="">
+            <img src="./images/cnt2_5.png" alt="이미지 5">
+            <ul>
+              <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
+              <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
+              <li>&#x2605; 4.9 (8,558)</li>
+            </ul>
+          </a> 
+        </li>
+
+        <li class="cnt2_b_1">
+          <a href="">
+            <img src="./images/cnt2_6.jpg" alt="이미지 6">
+            <ul>
+              <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
+              <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
+              <li>&#x2605; 4.9 (8,558)</li>
+            </ul>
+          </a> 
+        </li>
+
+        <li class="cnt2_b_1">
+          <a href="">
+            <img src="./images/cnt2_7.jpg" alt="이미지 7">
+            <ul>
+              <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
+              <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
+              <li>&#x2605; 4.9 (8,558)</li>
+            </ul>
+          </a> 
+        </li>
+
+        <li class="cnt2_b_1">
+          <a href="">
+            <img src="./images/cnt2_8.jpg" alt="이미지 8">
+            <ul>
+              <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
+              <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
+              <li>&#x2605; 4.9 (8,558)</li>
+            </ul>
+          </a> 
+        </li>
+      </ul>
+    </nav>
+    </div>
+
+    <!-- 메인컨텐츠 3 -->
+    <div class="ad_banner">
+      <a href="ad.html" title="광고 페이지 바로가기">
+        <div class="ad_left"></div>
+        <img src="./images/ad1.png" alt="광고배너">
+        <div class="ad_right"></div>
+      </a>
+    </div>
+
+    <!-- 메인컨텐츠 4 -->
+    <div class="limited_set">
+      <a href="limit.html" title="홀리데이 한정판 세트 만나보기 페이지 바로가기">
+        <h2>홀리데이 한정판 세트 만나보기</h2>
+        <ul class="cnt4_gallery">
+          <li><img src="./images/cnt4_1.jpg" alt="이미지1">CHEEK</li>
+          <li><img src="./images/cnt4_2.jpg" alt="이미지1">LIP</li>
+          <li><img src="./images/cnt4_3.jpg" alt="이미지1">EYE</li>
+          <li><img src="./images/cnt4_4.jpg" alt="이미지1">COMPLEXION</li>
+        </ul>
+      </a>
+    </div>
+
+    <!-- 메인컨텐츠 5 -->
+    <nav>
+      <div class="Shopping_benefits">
+        <a href="sh_b.html" title="쇼핑 혜택 페이지 바로가기"><h2>놓치면 안될 쇼핑 혜택</h2></a>
+        <ul>
+          <li class="sh_b_1"><a href="#" title=""><img src="./images/cnt5_1.jpg" alt="배너1"><span>겨울철 가려움, 각질 고민<br>완벽 케어 솔루션!</span></a></li>
+          <li class="sh_b_2"><a href="#" title=""><img src="./images/cnt5_2.jpg" alt="배너2"><span>새해맞이!<br>안티에이징 홈 케어 제품 추천</span></a></li>
+          <li class="sh_b_3"><a href="#" title=""><img src="./images/cnt5_3.jpg" alt="배너3"><span>돌아온 보습 레전드<br>올리브 라인</span></a></li>
+          <li class="sh_b_4"><a href="#" title=""><img src="./images/cnt5_4.jpg" alt="배너4"><span>이니스프리 직원 추천템<br>&#x0023;이니찐템</span></a></li>
+          <li class="sh_b_5"><a href="#" title=""><img src="./images/cnt5_5.jpg" alt="배너5"><span>반려견들을 위한 산책 뷰티템<br>이니스프리 그린펫클럽</span></a></li>
+          <li class="sh_b_6"><a href="#" title=""><img src="./images/cnt5_6.jpg" alt="배너6"><span>이니스프리 FORM 미쳤다!<br>이니스프리 클렌징폼</span></a></li>
+          <li class="sh_b_7"><a href="#" title=""><img src="./images/cnt5_7.jpg" alt="배너7"><span>눈여겨봐야 할<br>신상 아이템! UTILITY BAG</span></a></li>
+        </ul>
+      </div>
+      <ul class="cnt5_allow">
+        <li><i class="fa-solid fa-chevron-left"></i></li>
+        <li><i class="fa-solid fa-chevron-right"></i></li>
+      </ul>
+    </nav>
+
+    <!-- 메인컨텐츠 6 -->
+    <div class="ad_banner2">
+      <a href="ad.html" title="광고 페이지 바로가기">
+        <img src="./images/banner2.png" alt="광고 배너">
+      </a>
+    </div>
+  </main>
+
+
+
+  <!-- 푸터 영역 -->
+  <footer>
+    <div class="f_top">
+      <a href="index.html" title="메인페이지로 바로가기"><img src="./images/logo2.png" alt="하단로고"></a>
+      <li>
+        <a href="https://www.youtube.com/" title="유튜브 바로가기"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/" title="인스타그램 바로가기"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" title="페이스북 바로가기"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/" title="트위터 바로가기"><i class="fab fa-twitter"></i></a>
+      </li>
+    </div>
+
+    <div class="f_bottom">
+      <ul>
+        <li><a href="#" title="고객센터">고객센터</a></li>
+        <li><a href="#" title="개인정보처리방침"><span>개인정보처리방침</span></a></li>
+        <li><a href="#" title="이용약관">이용약관</a></li>
+      </ul>
+      <address>
+        <p>(주)이니스프리 서울특별시 용산구 이니스프리 대표이사 000</p>
+        <p>사업자 등록번호 000-00-00000 통신판매신고번호 0000-0000-0000</p>
+        <p>제품 문의 : 000-000-0000 FAX : 00-0000-0000</p>
+        <p>이메일 주소 innisfreezzang@.com 비즈니스제휴/입점문의</p>
+        <p>이메일 주소 무단 수집 거부 개인정보 보호책임자 정구화 호스팅 서비스 제공자</p>
+        <p>Copyright&copy;2024 by korea innisfree corp. all rightes reserved.</p>
+      </address>
+    </div>
+  </footer>
+
+  <!-- <script>
+    $(document).ready(function(){
+
+      const l_btn = $('.cnt5_allow li fa-solid:first-child');
+      const r_btn = $('.cnt5_allow li fa-solid:last-child');
+      let v_slide_img = $('.Shopping_benefits > ul > li');
+
+      function fadeInOut(){
+        // console.log('시간함수호출');
+        v_slide_img.fadeOut();
+        
+        if(i==2){
+          i=0;
+        }else{
+          i++;
+        }
+        v_slide_img.eq(i).stop().fadeIn();
+      }
+
+      function fadeInOut2(){
+        v_slide_img.fadeOut();
+        
+        if(i==0){
+          i=2;
+        }else{
+          i--;
+        }
+        v_slide_img.eq(i).stop().fadeIn();
+      }
+
+      let Timer = setInterval(fadeInOut,5000);
+
+      l_btn.click(function(){
+        fadeInOut2();
+      });
+      r_btn.click(function(){
+        fadeInOut();
+      });
+
+      $('.cnt5_allow li').hover(function(){
+        clearInterval(Timer);
+      },function(){//다시 마우스 아웃시 시간을 생성하여 다시 움직이게 한다.
+        Timer = setInterval(fadeInOut, 1000);
+      });
+
+
+    });
+
+  </script> -->
+</body>
+</html>

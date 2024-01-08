@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'Pretendard-Regular';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+/* . 공통서식(메인, 서브, 로그인, 회원가입 */
+
+/* 전체 글자모양 */
+*{font-family: 'Pretendard', 'Inter', 'sans-serif', 'arial';}
+h1, h2, h3, h4, h5, h6{color: #222;}
+
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{font-family: 'Gmarket Sans', sans-serif, arial;
+color: #333;}
+
+footer{
+  font-family:'나눔고딕', sans-serif, arial; color: #222;}
+
+footer a{color: #222; font-weight: 500; }
+
+footer > .f_box > address{font-weight: 500;}
