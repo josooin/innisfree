@@ -115,7 +115,7 @@ header{
 /* 메인 */
 main{
   padding-top: 90px;
-  position: relative;
+  /* position: relative; */
 }
 h2{
   font-size: 1.25rem;
@@ -123,27 +123,35 @@ h2{
 }
 
 .main_nav{
-  position: absolute;
+  /* position: absolute; */
   text-align: center;
-  width: 100%;
+  width: 100%; height: 3vh;
+
+}
+.main_nav ul{
+  font-size: 0px;
+  padding-right: 3%;
+
 }
 .main_nav ul li{
-  text-align: center;
-  display: inline;
-  font-size: 1.1rem;
-  font-weight: 900;
-  letter-spacing: -0.7mm;
+  width: 16.5%;
+  display: inline-block;
+  letter-spacing: -0.8mm;
 }
 .main_nav ul li a{
   /* border: 1px solid #f00; */
-  padding: 0.4px;
+  font-size: 1.1rem;
+  font-weight: 900;
 }
 
-/* 유튜브 */
-.youtube{
+/* 메인 영상 */
+#main_video{
   width: 100%;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   text-align: center;
+}
+#main_video video{
+  width: 100%;
 }
 
 /* 컨텐츠1 */
@@ -185,7 +193,7 @@ h2{
 .cnt2_top{
   margin: 10px 0px 20px;
   display: flex;
-  font-size: 10px;
+  font-size: 12px;
   /* border: 1px solid #f00; */
   gap: 5px;
 }
@@ -203,8 +211,17 @@ h2{
   background: #F5F5F5;
   transition: color 0.75s;
 }
+#product{
+  text-align: center;
+  display: flex;
+  position:relative;
+  border: 3px solid #f00;
+  width: 100%; height: 700px;
+}
+
 /* 컨텐츠2 이미지 배치 */
 .cnt2_gallery{
+  position: absolute;
   /* border: 1px solid #0f0; */
   display:grid;
   grid-gap: 20px 15px;
@@ -230,7 +247,7 @@ h2{
   line-height: 15px;
 }
 .cnt2_b_1 a ul li:first-child{
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 900;
 }
 .cnt2_price1{
@@ -243,21 +260,20 @@ h2{
 
 /* 컨텐츠3 광고배너 */
 .ad_banner{
-  margin: 50px 5%;
+  /* margin-top: 100%; */
   text-align: center;
   /* border: 1px solid #0f0; */
 }
 .ad_banner a img{
-  width: 70%;
-  height: 100px;}
+  width: 90%;}
 .ad_left{
-  width: 15%; height: 100px;
+  width: 5%; height: 50%;
   background: #D0DEE0;
   float: left;
   right: 0px; top: 0px;
 }
 .ad_right{
-  width: 15%; height: 100px;
+  width: 5%; height: 10%;
   background: #E6EFF4;
   float: right;
   right: 0px; top: 0px;
