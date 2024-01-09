@@ -75,22 +75,22 @@
       <nav class="gnb">
         <label for="toggle" class="c_btn"><i class="fas fa-times"></i></label>
         <ul>
-          <li><a href="skincare.html" title="스킨케어">스킨케어<i class='fas fa-angle-down'></i></a>
+          <li><a href="#" title="스킨케어">스킨케어<i class='fas fa-angle-down'></i></a>
             <ul class="sub">
-              <li><a href="skincare01.html" title="에센스/세럽/앰플">에센스/세럽/앰플</a></li>
-              <li><a href="skincare02.html" title="로션/크림">로션/크림</a></li>
-              <li><a href="skincare03.html" title="스킨/토너/미스트">스킨/토너/미스트</a></li>
-              <li><a href="skincare04.html" title="선케어">선케어</a></li>
-              <li><a href="skincare04.html" title="클렌징">클렌징</a></li>
-              <li><a href="skincare05.html" title="팩/마스크">팩/마스크</a></li>
-              <li><a href="skincare06.html" title="립/마스크">립/마스크</a></li>
-              <li><a href="skincare07.html" title="오일/마사지">오일/마사지</a></li>
-              <li><a href="skincare08.html" title="기획세트">기획세트</a></li>
-              <li><a href="skincare09.html" title="기타">기타</a></li>
+              <li id="kategorie"><a href="skincare01.html" title="에센스/세럽/앰플">에센스/세럽/앰플</a></li>
+              <li id="kategorie"><a href="skincare02.html" title="로션/크림">로션/크림</a></li>
+              <li id="kategorie"><a href="skincare03.html" title="스킨/토너/미스트">스킨/토너/미스트</a></li>
+              <li id="kategorie"><a href="skincare04.html" title="선케어">선케어</a></li>
+              <li id="kategorie"><a href="skincare04.html" title="클렌징">클렌징</a></li>
+              <li id="kategorie"><a href="skincare05.html" title="팩/마스크">팩/마스크</a></li>
+              <li id="kategorie"><a href="skincare06.html" title="립/마스크">립/마스크</a></li>
+              <li id="kategorie"><a href="skincare07.html" title="오일/마사지">오일/마사지</a></li>
+              <li id="kategorie"><a href="skincare08.html" title="기획세트">기획세트</a></li>
+              <li id="kategorie"><a href="skincare09.html" title="기타">기타</a></li>
             </ul>
           </li>
 
-          <li><a href="makeup.html" title="메이크업">메이크업<i class='fas fa-angle-down'></i></a>
+          <li><a href="#" title="메이크업">메이크업<i class='fas fa-angle-down'></i></a>
             <ul class="sub">
               <li><a href="makeup01.html" title="페이스메이크업">페이스메이크업</a></li>
               <li><a href="makeup02.html" title="아이메이크업">아이메이크업</a></li>
@@ -99,7 +99,7 @@
             </ul>
           </li>
 
-          <li><a href="man.html" title="남성">남성<i class='fas fa-angle-down'></i></a>
+          <li><a href="#" title="남성">남성<i class='fas fa-angle-down'></i></a>
             <ul class="sub">
               <li><a href="man01.html" title="스킨케어">스킨케어</a></li>
               <li><a href="man02.html" title="클렌징">클렌징</a></li>
@@ -107,7 +107,7 @@
             </ul>
           </li>
 
-          <li><a href="hbp.html" title="헤어/바디/펫">헤어/바디/펫<i class='fas fa-angle-down'></i></a>
+          <li><a href="#" title="헤어/바디/펫">헤어/바디/펫<i class='fas fa-angle-down'></i></a>
             <ul class="sub">
               <li><a href="hbp01.html" title="펫">펫</a></li>
               <li><a href="hbp02.html" title="핸드/풋케어">핸드/풋케어</a></li>
@@ -116,13 +116,13 @@
             </ul>
           </li>
           
-          <li><a href="s_set.html" title="기획세트">기획세트<i class='fas fa-angle-down'></i></a>
+          <li><a href="#" title="기획세트">기획세트<i class='fas fa-angle-down'></i></a>
             <ul class="sub">
               <li><a href="s_set01.html" title="기획세트">기획세트</a></li>
             </ul>
           </li>
           
-          <li><a href="props.html" title="미용소품">미용소품<i class='fas fa-angle-down'></i></a>
+          <li><a href="#" title="미용소품">미용소품<i class='fas fa-angle-down'></i></a>
             <ul class="sub">
               <li><a href="props01.html" title="브러시">브러시</a></li>
               <li><a href="props02.html" title="네일소품">네일소품</a></li>
@@ -383,10 +383,43 @@
         <p>제품 문의 : 000-000-0000 FAX : 00-0000-0000</p>
         <p>이메일 주소 innisfreezzang@.com 비즈니스제휴/입점문의</p>
         <p>이메일 주소 무단 수집 거부 개인정보 보호책임자 정구화 호스팅 서비스 제공자</p>
-        <p>Copyright&copy;2024 by korea innisfree corp. all rightes reserved.</p>
+        <p>Copyright&copy;2024 by korea innisfreezzang corp. all rightes reserved.</p>
       </address>
     </div>
   </footer>
+  <script>
+    $(document).ready(function(){
+
+
+      // 카테고리메뉴 
+
+      // 마우스 오버
+      let list = $('.sub > li > a');
+      list.hover(function(){ // 목록에 마우스 오버 시 == mouseover, mouseenter
+        $(this).animate({'font-size':'16px'}, 500);
+      },function(){ // 마우스 아웃 시 == mouseout, mouseleave
+        $(this).animate({'font-size':'14px'}, 500);
+      });
+
+      // 아코디언
+      // 1. 변수선언
+      const mnu = $('.h_bottom > .gnb > ul > li > a'); 
+
+      // 2. 메뉴 클릭 시 해당 서브 나오게 하기
+      mnu.click(function(){
+
+        // 2. 아코디언 메뉴
+        $('.sub').slideUp(); // 모든 서브메뉴를 위로 접고
+        $(this).next().slideDown(); //선택한 메뉴의 서브만 나오게 한다.
+        $('i').removeClass('act'); // 모든 i태그의 act서식을 제거하고
+        $(this).find('i').addClass('act'); // 선택한 메뉴의 자손 i태그에 act서식을 적용한다.
+
+      });
+
+
+    });
+
+  </script>
 
   <!-- <script>
     $(document).ready(function(){
