@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detecion" content="telephone=no">
   <title>이니스프리 반응형 웹-메인페이지</title>
-  <!-- 1. reset -->
+  <!-- reset -->
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
 
-  <!-- 2. base -->
+  <!-- base -->
   <link rel="stylesheet" href="./css/base.css" type="text/css">
 
-  <!-- 3. 공통서식 header, footer 공통서식 -->
-  <!-- <link href="./css/common.css" rel="stylesheet" type="text/css"> -->
-
-  <!-- 4. mobile해상도에 맞는 서식 (기준서식) -->
+  <!-- mobile해상도에 맞는 서식 (기준서식) -->
   <link href="./css/mobile.css" rel="stylesheet" type="text/css">
 
-  <!-- 5. tablet해상도에 맞는 서식 -->
-  <!-- <link href="./css/tablet.css" rel="stylesheet" type="text/css"> -->
+  <!-- tablet해상도에 맞는 서식 -->
+  <link href="./css/tablet.css" rel="stylesheet" type="text/css">
 
-  <!-- 6. pc해상도에 맞는 서식 -->
-  <!-- <link href="./css/pc.css" rel="stylesheet" type="text/css"> -->
+  <!-- pc해상도에 맞는 서식 -->
+  <link href="./css/pc.css" rel="stylesheet" type="text/css">
 
-  <!-- 슬라이드 서식  -->
-  <link rel="stylesheet" href="./css/swiper.css" type="text/css">
+  <!-- search 서식 -->
+  <link href="./css/search.css" rel="stylesheet" type="text/css">
 
   <!-- 슬라이드 제이쿼리 스크립트 -->
   <script src="./script/swiper.js"></script>
@@ -32,766 +30,671 @@
   <!-- 제이쿼리 라이브러리 연결하기 -->
   <script src="./script/jquery-3.7.1.js"></script>
 
-  <!-- 제이쿼리 라이브러리 연결하기 -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-  <!-- 제이쿼리 내용 작성하기(랩퍼) --> 
-
   <!-- 폰트어썸 아이콘폰트 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
+
 <body>
   <form name="search" method="post" action="search.php">
-  <input type="checkbox" id="toggle">
+    <input type="checkbox" id="toggle">
     <!-- 헤더 영역 -->
-  <header>
-    <div class="h_top">
-      <!-- 상단 로고 -->
-      <h1>
-        <a href="index.html" title="메인페이지로 바로가기"><img src="./images/logo.png" alt="상단로고"></a>
-      </h1>
+    <header>
+      <div class="h_top">
+        <!-- 상단 로고 -->
+        <h1><a href="#" title="메인페이지로 바로가기"><img src="./images/logo.png" alt="상단로고"></a></h1>
 
-      <!-- 검색폼 -->
-      <p class="btn_search">
-        <a href="javascript:void(0);"><img alt="통합검색" src="./images/search_img.png"></a>
-      <!-- <label for="totalSearch" class="a11y">통합검색</label><input id="totalSearch" placeholder="통합검색" type="text"> -->
-      </p>
-      
-      <!-- 장바구니 -->
-      <li><a href="cart.html" title="장바구니"><img src="./images/cart_img.png" alt="장바구니" class="cart_btn"></a></li>
+        <!-- 검색폼 -->
+        <div class="search_btn">
+          <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+            <div class="search-icon" onclick="document.querySelector('.search-input').focus();">
+              <img src="./images/search_img.png" alt="검색버튼">
+            </div>
+          </div>
+        </div>
 
-      <!-- 마이페이지 -->
-      <li><a href="마이페이지" title="로그인페이지"><img src="./images/login_img.png" alt="로그인페이지" class="login_btn"></a></li>
-      
-      <!-- 카테고리 -->
-      <label for="toggle" class="total_btn">
-        <img src="./images/menu_img.png" alt="카테고리 메뉴바">
-      </label>
-    </div>
+        <!-- 장바구니 -->
+        <p><a href="#" title="장바구니"><img src="./images/cart_img.png" alt="장바구니" class="cart_btn"></a></p>
 
-    <div class="h_bottom">
-      <nav class="gnb">
-        <label for="toggle" class="c_btn"><i class="fas fa-times"></i></label>
+        <!-- 마이페이지 -->
+        <p><a href="#" title="로그인페이지"><img src="./images/login_img.png" alt="로그인페이지" class="login_btn"></a>
+        </p>
+
+        <!-- 카테고리 -->
+        <label for="toggle" class="total_btn">
+          <img src="./images/menu_img.png" alt="카테고리 메뉴바">
+        </label>
+      </div>
+
+      <div class="h_bottom">
+        <nav class="gnb">
+          <label for="toggle" class="c_btn"><i class="fas fa-times"></i></label>
+          <ul>
+            <li><a href="#" title="스킨케어">스킨케어<i class='fas fa-angle-down'></i></a>
+              <ul class="sub">
+                <li id="kategorie"><a href="skincare01.html" title="에센스/세럽/앰플">에센스/세럽/앰플</a></li>
+                <li id="kategorie"><a href="skincare02.html" title="로션/크림">로션/크림</a></li>
+                <li id="kategorie"><a href="skincare03.html" title="스킨/토너/미스트">스킨/토너/미스트</a></li>
+                <li id="kategorie"><a href="skincare04.html" title="선케어">선케어</a></li>
+                <li id="kategorie"><a href="skincare04.html" title="클렌징">클렌징</a></li>
+                <li id="kategorie"><a href="skincare05.html" title="팩/마스크">팩/마스크</a></li>
+                <li id="kategorie"><a href="skincare06.html" title="립/마스크">립/마스크</a></li>
+                <li id="kategorie"><a href="skincare07.html" title="오일/마사지">오일/마사지</a></li>
+                <li id="kategorie"><a href="skincare08.html" title="기획세트">기획세트</a></li>
+                <li id="kategorie"><a href="skincare09.html" title="기타">기타</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#" title="메이크업">메이크업<i class='fas fa-angle-down'></i></a>
+              <ul class="sub">
+                <li><a href="makeup01.html" title="페이스메이크업">페이스메이크업</a></li>
+                <li><a href="makeup02.html" title="아이메이크업">아이메이크업</a></li>
+                <li><a href="makeup03.html" title="립메이크업">립메이크업</a></li>
+                <li><a href="makeup04.html" title="네일">네일</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#" title="남성">남성<i class='fas fa-angle-down'></i></a>
+              <ul class="sub">
+                <li><a href="man01.html" title="스킨케어">스킨케어</a></li>
+                <li><a href="man02.html" title="클렌징">클렌징</a></li>
+                <li><a href="man03.html" title="기획세트">기획세트</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#" title="헤어/바디/펫">헤어/바디/펫<i class='fas fa-angle-down'></i></a>
+              <ul class="sub">
+                <li><a href="hbp01.html" title="펫">펫</a></li>
+                <li><a href="hbp02.html" title="핸드/풋케어">핸드/풋케어</a></li>
+                <li><a href="hbp03.html" title="바디로션/미스트">바디 로션/미스트</a></li>
+                <li><a href="hbp04.html" title="바디워시/미스트">바디 워시/청결제</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#" title="기획세트">기획세트<i class='fas fa-angle-down'></i></a>
+              <ul class="sub">
+                <li><a href="s_set01.html" title="기획세트">기획세트</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#" title="미용소품">미용소품<i class='fas fa-angle-down'></i></a>
+              <ul class="sub">
+                <li><a href="props01.html" title="브러시">브러시</a></li>
+                <li><a href="props02.html" title="네일소품">네일소품</a></li>
+                <li><a href="props03.html" title="헤어/바디소품">헤어/바디소품</a></li>
+                <li><a href="props04.html" title="퍼프/스펀지">퍼프/스펀지</a></li>
+                <li><a href="props05.html" title="화장솜/면봉/기름종이">화장솜/면봉/기름종이</a></li>
+                <li><a href="props06.html" title="클렌징소품">클렌징 소품</a></li>
+                <li><a href="props07.html" title="기타소품">기타 소품</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 메인 영역 -->
+    <main>
+      <nav class="main_nav">
         <ul>
-          <li><a href="#" title="스킨케어">스킨케어<i class='fas fa-angle-down'></i></a>
-            <ul class="sub">
-              <li id="kategorie"><a href="skincare01.html" title="에센스/세럽/앰플">에센스/세럽/앰플</a></li>
-              <li id="kategorie"><a href="skincare02.html" title="로션/크림">로션/크림</a></li>
-              <li id="kategorie"><a href="skincare03.html" title="스킨/토너/미스트">스킨/토너/미스트</a></li>
-              <li id="kategorie"><a href="skincare04.html" title="선케어">선케어</a></li>
-              <li id="kategorie"><a href="skincare04.html" title="클렌징">클렌징</a></li>
-              <li id="kategorie"><a href="skincare05.html" title="팩/마스크">팩/마스크</a></li>
-              <li id="kategorie"><a href="skincare06.html" title="립/마스크">립/마스크</a></li>
-              <li id="kategorie"><a href="skincare07.html" title="오일/마사지">오일/마사지</a></li>
-              <li id="kategorie"><a href="skincare08.html" title="기획세트">기획세트</a></li>
-              <li id="kategorie"><a href="skincare09.html" title="기타">기타</a></li>
-            </ul>
-          </li>
-
-          <li><a href="#" title="메이크업">메이크업<i class='fas fa-angle-down'></i></a>
-            <ul class="sub">
-              <li><a href="makeup01.html" title="페이스메이크업">페이스메이크업</a></li>
-              <li><a href="makeup02.html" title="아이메이크업">아이메이크업</a></li>
-              <li><a href="makeup03.html" title=립메이크업">립메이크업</a></li>
-              <li><a href="makeup04.html" title=네일">네일</a></li>
-            </ul>
-          </li>
-
-          <li><a href="#" title="남성">남성<i class='fas fa-angle-down'></i></a>
-            <ul class="sub">
-              <li><a href="man01.html" title="스킨케어">스킨케어</a></li>
-              <li><a href="man02.html" title="클렌징">클렌징</a></li>
-              <li><a href="man03.html" title=기획세트">기획세트</a></li>
-            </ul>
-          </li>
-
-          <li><a href="#" title="헤어/바디/펫">헤어/바디/펫<i class='fas fa-angle-down'></i></a>
-            <ul class="sub">
-              <li><a href="hbp01.html" title="펫">펫</a></li>
-              <li><a href="hbp02.html" title="핸드/풋케어">핸드/풋케어</a></li>
-              <li><a href="hbp03.html" title=바디로션/미스트">바디 로션/미스트</a></li>
-              <li><a href="hbp04.html" title=바디워시/미스트">바디 워시/청결제</a></li>
-            </ul>
-          </li>
-          
-          <li><a href="#" title="기획세트">기획세트<i class='fas fa-angle-down'></i></a>
-            <ul class="sub">
-              <li><a href="s_set01.html" title="기획세트">기획세트</a></li>
-            </ul>
-          </li>
-          
-          <li><a href="#" title="미용소품">미용소품<i class='fas fa-angle-down'></i></a>
-            <ul class="sub">
-              <li><a href="props01.html" title="브러시">브러시</a></li>
-              <li><a href="props02.html" title="네일소품">네일소품</a></li>
-              <li><a href="props03.html" title="헤어/바디소품">헤어/바디소품</a></li>
-              <li><a href="props04.html" title="퍼프/스펀지">퍼프/스펀지</a></li>
-              <li><a href="props05.html" title="화장솜/면봉/기름종이">화장솜/면봉/기름종이</a></li>
-              <li><a href="props06.html" title="클렌징소품">클렌징 소품</a></li>
-              <li><a href="props07.html" title="기타소품">기타 소품</a></li>
-            </ul>
-          </li>
+          <li><a href="#" title="브랜드">브랜드</a></li>
+          <li><a href="#" title="제품소개">제품소개</a></li>
+          <li><a href="#" title="이벤트">이벤트</a></li>
+          <li><a href="#" title="코스메틱">코스메틱</a></li>
+          <li><a href="#" title="기획전">기획전</a></li>
+          <li><a href="#" title="공지사항">공지사항</a></li>
         </ul>
       </nav>
-    </div>
-  </header>
-  
-  <!-- 메인 영역 -->
-  <main>
-    <nav class="main_nav">
-      <ul>
-        <li><a href="#" title="브랜드">브랜드</a></li>
-        <li><a href="#" title="제품소개">제품소개</a></li>
-        <li><a href="#" title="이벤트">이벤트</a></li>
-        <li><a href="#" title="코스메틱">코스메틱</a></li>
-        <li><a href="#" title="기획전">기획전</a></li>
-        <li><a href="#" title="공지사항">공지사항</a></li> 
-      </ul>
-    </nav>
-    <script>
-      $(document).ready(function(){
-  
-        let main_nav = $('main > .main_nav > ul > li > a');
-  
-        main_nav.each(function(){ 
-          $(this).click(function(){
-  
-            $(this).css('border-bottom','3px solid #333').parent().siblings().find('a').css('border-bottom','#fff');
-  
-            return false;
-          });
-        });
-      });
-    </script>
 
-    <!-- 메인 영상 -->
-    <div id="main_video">
-      <video src="./videos/main_video.mp4" muted autoplay playsinline loop controls poster="./images/thumb.png"></video>
-    </div>
-
-    <!-- 메인컨텐츠 1 -->
-    <div class="b_story">
-      <a href="brandstory.html" title="브랜드스토리 페이지 바로가기">
-        <h2>BRAND STORY</h2>
-        <div class="main_cnt1">
-          <li><img src="./images/c_img1.png" alt="브랜드스토리 이미지1"></li>
-          <li><img src="./images/c_img2.png" alt="브랜드스토리 이미지2"></li>
-        </div>
-        
-        <p class="b_story_t1">Enjoy being you,<br>
-          Be free with INNISFREE<br><br></p>
-        <p class="b_story_t2">이니스프리와 함께 겉으로 보이는 아름다움을 넘어<br>
-          당신의 모든 아름다운 찰나를 발견해보세요.</p>
-      </a>
-    </div>
-
-    <!-- 메인컨텐츠 2 -->
-    <div class="n_best">
-      <h2><a href="now_best.html" title="지금 제일 잘나가요 바로가기">지금 제일 잘나가요</a></h2>
-    <nav class="cnt2">
-      <ul class="cnt2_top">
-        <li class="cnt2_nav"><a href="#" title="전체">전체</a></li>
-        <li class="cnt2_nav"><a href="#" title="스킨케어">스킨케어</a></li>
-        <li class="cnt2_nav"><a href="#" title="메이크업">메이크업</a></li>
-        <li class="cnt2_nav"><a href="#" title="헤어/바디/펫">헤어/바디/펫</a></li>
-        <li class="cnt2_nav"><a href="#" title="미용소품">미용소품</a></li>
-      </ul>
-      
-      <article id="product">
-        <ul class="cnt2_gallery">
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_1.jpg" alt="이미지 1">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_2.png" alt="이미지 2">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_3.png" alt="이미지 3">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_4.jpg" alt="이미지 4">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-  
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_5.png" alt="이미지 5">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_6.jpg" alt="이미지 6">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_7.jpg" alt="이미지 7">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_8.jpg" alt="이미지 8">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-        </ul>
-  
-        <ul class="cnt2_gallery">
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_1.jpg" alt="이미지 1">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_2.png" alt="이미지 2">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_3.png" alt="이미지 3">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_4.jpg" alt="이미지 4">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-  
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_5.png" alt="이미지 5">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_6.jpg" alt="이미지 6">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_7.jpg" alt="이미지 7">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_8.jpg" alt="이미지 8">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-        </ul>
-  
-        <ul class="cnt2_gallery">
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_1.jpg" alt="이미지 1">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_2.png" alt="이미지 2">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_3.png" alt="이미지 3">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_4.jpg" alt="이미지 4">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-  
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_5.png" alt="이미지 5">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_6.jpg" alt="이미지 6">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_7.jpg" alt="이미지 7">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_8.jpg" alt="이미지 8">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-        </ul>
-  
-        <ul class="cnt2_gallery">
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_1.jpg" alt="이미지 1">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_2.png" alt="이미지 2">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_3.png" alt="이미지 3">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_4.jpg" alt="이미지 4">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-  
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_5.png" alt="이미지 5">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_6.jpg" alt="이미지 6">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_7.jpg" alt="이미지 7">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_8.jpg" alt="이미지 8">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-        </ul>
-  
-        <ul class="cnt2_gallery">
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_1.jpg" alt="이미지 1">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_2.png" alt="이미지 2">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_3.png" alt="이미지 3">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_4.jpg" alt="이미지 4">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-  
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_5.png" alt="이미지 5">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_6.jpg" alt="이미지 6">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_7.jpg" alt="이미지 7">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-  
-          <li class="cnt2_b_1">
-            <a href="">
-              <img src="./images/cnt2_8.jpg" alt="이미지 8">
-              <ul>
-                <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
-                <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
-                <li>&#x2605; 4.9 (8,558)</li>
-              </ul>
-            </a> 
-          </li>
-        </ul>
-      </article>
-
-    </nav>
-    </div>
-
-    <!-- 메인컨텐츠 3 -->
-    <div class="ad_banner">
-      <a href="ad.html" title="광고 페이지 바로가기">
-        <div class="ad_left"></div>
-        <img src="./images/ad1.png" alt="광고배너">
-        <div class="ad_right"></div>
-      </a>
-    </div>
-
-    <!-- 메인컨텐츠 4 -->
-    <div class="limited_set">
-      <a href="limit.html" title="홀리데이 한정판 세트 만나보기 페이지 바로가기">
-        <h2>홀리데이 한정판 세트 만나보기</h2>
-        <ul class="cnt4_gallery">
-          <li><img src="./images/cnt4_1.jpg" alt="이미지1">CHEEK</li>
-          <li><img src="./images/cnt4_2.jpg" alt="이미지1">LIP</li>
-          <li><img src="./images/cnt4_3.jpg" alt="이미지1">EYE</li>
-          <li><img src="./images/cnt4_4.jpg" alt="이미지1">COMPLEXION</li>
-        </ul>
-      </a>
-    </div>
-
-    <!-- 메인컨텐츠 5 -->
-    <nav>
-      <div class="Shopping_benefits">
-        <a href="sh_b.html" title="쇼핑 혜택 페이지 바로가기"><h2>놓치면 안될 쇼핑 혜택</h2></a>
-        <ul>
-          <li class="sh_b_1"><a href="#" title=""><img src="./images/cnt5_1.jpg" alt="배너1"><span>겨울철 가려움, 각질 고민<br>완벽 케어 솔루션!</span></a></li>
-          <li class="sh_b_2"><a href="#" title=""><img src="./images/cnt5_2.jpg" alt="배너2"><span>새해맞이!<br>안티에이징 홈 케어 제품 추천</span></a></li>
-          <li class="sh_b_3"><a href="#" title=""><img src="./images/cnt5_3.jpg" alt="배너3"><span>돌아온 보습 레전드<br>올리브 라인</span></a></li>
-          <li class="sh_b_4"><a href="#" title=""><img src="./images/cnt5_4.jpg" alt="배너4"><span>이니스프리 직원 추천템<br>&#x0023;이니찐템</span></a></li>
-          <li class="sh_b_5"><a href="#" title=""><img src="./images/cnt5_5.jpg" alt="배너5"><span>반려견들을 위한 산책 뷰티템<br>이니스프리 그린펫클럽</span></a></li>
-          <li class="sh_b_6"><a href="#" title=""><img src="./images/cnt5_6.jpg" alt="배너6"><span>이니스프리 FORM 미쳤다!<br>이니스프리 클렌징폼</span></a></li>
-          <li class="sh_b_7"><a href="#" title=""><img src="./images/cnt5_7.jpg" alt="배너7"><span>눈여겨봐야 할<br>신상 아이템! UTILITY BAG</span></a></li>
-        </ul>
+      <!-- 메인 영상 -->
+      <div id="main_video">
+        <video src="./videos/main_video.mp4" muted autoplay playsinline loop controls
+          poster="./images/thumb.png"></video>
       </div>
-      <ul class="cnt5_allow">
-        <li><i class="fa-solid fa-chevron-left"></i></li>
-        <li><i class="fa-solid fa-chevron-right"></i></li>
-      </ul>
-    </nav>
 
-    <!-- 메인컨텐츠 6 -->
-    <div class="ad_banner2">
-      <a href="ad.html" title="광고 페이지 바로가기">
-        <img src="./images/banner2.png" alt="광고 배너">
-      </a>
-    </div>
-  </main>
+      <!-- 메인컨텐츠 1 -->
+      <div class="b_story">
+        <a href="brandstory.html" title="브랜드스토리 페이지 바로가기">
+          <h2>BRAND STORY</h2>
+          <div class="main_cnt1">
+            <li><img src="./images/c_img1.png" alt="브랜드스토리 이미지1"></li>
+            <li><img src="./images/c_img2.png" alt="브랜드스토리 이미지2"></li>
+          </div>
+
+          <p class="b_story_t1">Enjoy being you,<br>
+            Be free with INNISFREE<br><br></p>
+          <p class="b_story_t2">이니스프리와 함께 겉으로 보이는 아름다움을 넘어<br>
+            당신의 모든 아름다운 찰나를 발견해보세요.</p>
+        </a>
+      </div>
+
+      <!-- 메인컨텐츠 2 -->
+      <div class="n_best">
+        <h2><a href="now_best.html" title="지금 제일 잘나가요 바로가기">지금 제일 잘나가요</a></h2>
+        <nav class="cnt2">
+          <ul class="cnt2_top">
+            <li class="cnt2_nav act"><a href="javascript:void(0);" title="전체">전체</a></li>
+            <li class="cnt2_nav"><a href="javascript:void(0);" title="스킨케어">스킨케어</a></li>
+            <li class="cnt2_nav"><a href="javascript:void(0);" title="메이크업">메이크업</a></li>
+            <li class="cnt2_nav"><a href="javascript:void(0);" title="헤어/바디/펫">헤어/바디/펫</a></li>
+            <li class="cnt2_nav"><a href="javascript:void(0);" title="미용소품">미용소품</a></li>
+          </ul>
+
+          <article id="product">
+            <ul class="cnt2_gallery cnt2_1">
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_1_1.jpg" alt="이미지 1">
+                  <ul>
+                    <li>BEST[홀리데이] 그린티 세라마이드 탄력 크림 리필 세트</li>
+                    <li><span class="cnt2_price1">45,240</span> <span class="cnt2_price2">22%</span> 58,000</li>
+                    <li>&#x2605; 4.9 (8,558)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_1_2.png" alt="이미지 2">
+                  <ul>
+                    <li>BEST 레티놀 시카 앰플[대용량] 50ml + 레티놀 시카 크림 BEST</li>
+                    <li><span class="cnt2_price1">65,320</span> <span class="cnt2_price2">29%</span> 92,000</li>
+                    <li>&#x2605; 4.8 (7,781)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_1_3.png" alt="이미지 3">
+                  <ul>
+                    <li>BEST 레키놀 시카 흔적[대용량]</li>
+                    <li><span class="cnt2_price1">45,600</span> <span class="cnt2_price2">29%</span> 57,000</li>
+                    <li>&#x2605; 4.8 (43,755)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_1_4.jpg" alt="이미지 4">
+                  <ul>
+                    <li>BEST 튜이 틴트 립밤</li>
+                    <li><span class="cnt2_price1">9,000</span> <span class="cnt2_price2">~50%</span> 18,000</li>
+                    <li>&#x2605; 4.8 (5,781)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_1_5.png" alt="이미지 5">
+                  <ul>
+                    <li>BEST 그린티 씨드 세럼 80ml + 씨드 크림 50ml</li>
+                    <li><span class="cnt2_price1">40,600</span> <span class="cnt2_price2">30%</span> 58,000</li>
+                    <li>&#x2605; 4.9 (14,465)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_1_6.jpg" alt="이미지 6">
+                  <ul>
+                    <li>BEST 그린티 씨드 히알루론산 크림</li>
+                    <li><span class="cnt2_price1">20,600</span> <span class="cnt2_price2">25%</span> 27,000</li>
+                    <li>&#x2605; 4.9 (3,978)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_1_7.jpg" alt="이미지 7">
+                  <ul>
+                    <li>BEST 블랙티 유스 인헨싱 트리트먼트 에센스</li>
+                    <li><span class="cnt2_price1">33,750</span> <span class="cnt2_price2">25%</span> 45,000</li>
+                    <li>&#x2605; 4.9 (17,732)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_1_8.jpg" alt="이미지 8">
+                  <ul>
+                    <li>BEST 블랙티 유스 인헨싱 앰플[대용량]</li>
+                    <li><span class="cnt2_price1">42,000</span> <span class="cnt2_price2">25%</span> 58,000</li>
+                    <li>&#x2605; 4.9 (49,854)</li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="cnt2_gallery cnt2_2">
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_2_1.png" alt="이미지 1">
+                  <ul>
+                    <li>BEST[회사원A] 콜라겐 본품 + 리필(50mL+50mL+10mL*8)</li>
+                    <li><span class="cnt2_price1">43,000</span> <span class="cnt2_price2">35%</span> 67,000</li>
+                    <li>&#x2605; 4.9 (10,429)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_2_2.jpg" alt="이미지 2">
+                  <ul>
+                    <li>BEST 에너지마스크</li>
+                    <li><span class="cnt2_price1">2,000</span> <span class="cnt2_price2"></span></li>
+                    <li>&#x2605; 4.8 (14,276)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_2_3.png" alt="이미지 3">
+                  <ul>
+                    <li>BEST 그린티 씨드 세럼 80ml + 씨드 크림 50ml</li>
+                    <li><span class="cnt2_price1">40,600</span> <span class="cnt2_price2">30%</span> 58,000</li>
+                    <li>&#x2605; 4.9 (15,372)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_2_4.png" alt="이미지 4">
+                  <ul>
+                    <li>BEST 2024 레티놀 앰플 럭키박스</li>
+                    <li><span class="cnt2_price1">30,000</span> <span class="cnt2_price2">25%</span> 40,000</li>
+                    <li>&#x2605; 4.8 (44,416)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_2_5.jpg" alt="이미지 5">
+                  <ul>
+                    <li>BEST 비타C 잡티 토닝 세럼[대용량] 50ml + 마리떼 귀마개 증정</li>
+                    <li><span class="cnt2_price1">39,200</span> <span class="cnt2_price2">30%</span> 56,000</li>
+                    <li>&#x2605; 4.8 (14,637)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_2_6.jpg" alt="이미지 6">
+                  <ul>
+                    <li>BEST 액티브 마스크</li>
+                    <li><span class="cnt2_price1">3,000</span> <span class="cnt2_price2"></span></li>
+                    <li>&#x2605; 4.8 (2,439)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_2_7.jpg" alt="이미지 7">
+                  <ul>
+                    <li>BEST 퍼펙트 9 인텐시브 스킨케어 세트</li>
+                    <li><span class="cnt2_price1">74,000</span> <span class="cnt2_price2"></span></li>
+                    <li>&#x2605; 4.8 (2,040)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_2_8.jpg" alt="이미지 8">
+                  <ul>
+                    <li>BEST 블랙티 유스 인핸싱 크림</li>
+                    <li><span class="cnt2_price1">22,780</span> <span class="cnt2_price2">33%</span> 34,000</li>
+                    <li>&#x2605; 4.8 (6,294)</li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="cnt2_gallery cnt2_3">
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_3_1.jpg" alt="이미지 1">
+                  <ul>
+                    <li>BEST 듀이 틴트 립밤</li>
+                    <li><span class="cnt2_price1">13,500</span> <span class="cnt2_price2">25%</span> 18,000</li>
+                    <li>&#x2605; 4.8 (6,431)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_3_2.jpg" alt="이미지 2">
+                  <ul>
+                    <li>BEST 라이트 피팅 메이크업 베이스</li>
+                    <li><span class="cnt2_price1">20,800</span> <span class="cnt2_price2">20%</span> 26,000</li>
+                    <li>&#x2605; 4.9 (42)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_3_3.jpg" alt="이미지 3">
+                  <ul>
+                    <li>BEST 음영 정석 팔레트</li>
+                    <li><span class="cnt2_price1">35,000</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.7 (527)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_3_4.jpg" alt="이미지 4">
+                  <ul>
+                    <li>BEST 노세범 미네랄 파우더</li>
+                    <li><span class="cnt2_price1">6,750</span> <span class="cnt2_price2">25%</span> 9,000</li>
+                    <li>&#x2605; 4.8 (19,304)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_3_5.jpg" alt="이미지 5">
+                  <ul>
+                    <li>BEST 파워프루프 브러시 라이너</li>
+                    <li><span class="cnt2_price1">10,800</span> <span class="cnt2_price2">10%</span> 12,000</li>
+                    <li>&#x2605; 4.6 (4,233)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_3_6.jpg" alt="이미지 6">
+                  <ul>
+                    <li>BEST 노세범 파우더 쿠션</li>
+                    <li><span class="cnt2_price1">19,500</span> <span class="cnt2_price2">25%</span> 26,000</li>
+                    <li>&#x2605; 4.7 (5,952)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_3_7.jpg" alt="이미지 7">
+                  <ul>
+                    <li>BEST 듀이 트리트먼트 립밤</li>
+                    <li><span class="cnt2_price1">13,500</span> <span class="cnt2_price2">25%</span> 18,000</li>
+                    <li>&#x2605; 4.8 (1,117)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_3_8.jpg" alt="이미지 8">
+                  <ul>
+                    <li>BEST 심플라벨 래스팅 펜슬 브로우</li>
+                    <li><span class="cnt2_price1">13,000</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.7 (1,034)</li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="cnt2_gallery cnt2_4">
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_4_1.jpg" alt="이미지 1">
+                  <ul>
+                    <li>BEST 스페셜 케어 마스크 [풋]</li>
+                    <li><span class="cnt2_price1">3,500</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.9 (8,558)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_4_2.jpg" alt="이미지 2">
+                  <ul>
+                    <li>BEST 마이 헤어 레시피 에센셜 오일 세럼</li>
+                    <li><span class="cnt2_price1">15,000</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.8 (4,139)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_4_3.jpg" alt="이미지 3">
+                  <ul>
+                    <li>BEST 마이 헤어 레시피 스트렝스 샴푸</li>
+                    <li><span class="cnt2_price1">13,000</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.8 (3,660)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_4_4.jpg" alt="이미지 4">
+                  <ul>
+                    <li>BEST 리스테이 임브레이싱 핸드워시</li>
+                    <li><span class="cnt2_price1">16,000</span> <span class="cnt2_price2">20%</span> 20,000</li>
+                    <li>&#x2605; 4.8 (767)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_4_5.jpg" alt="이미지 5">
+                  <ul>
+                    <li>BEST 마이 헤어 레시피 스트렝스 트리트먼트</li>
+                    <li><span class="cnt2_price1">15,000</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.8 (597)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_4_6.jpg" alt="이미지 6">
+                  <ul>
+                    <li>BEST 그린펫클럽 꼼꼼 워터리스 발세정제 [동물용 의약외품]</li>
+                    <li><span class="cnt2_price1">25,200</span> <span class="cnt2_price2">10%</span> 28,000</li>
+                    <li>&#x2605; 4.9 (98)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_4_7.jpg" alt="이미지 7">
+                  <ul>
+                    <li> 스페셜 케어 마스크 [핸드]</li>
+                    <li><span class="cnt2_price1">3,500</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.8 (2,101)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_4_8.jpg" alt="이미지 8">
+                  <ul>
+                    <li>BEST 마이 퍼퓸드 핸드크림 [대용량]</li>
+                    <li><span class="cnt2_price1">10,200</span> <span class="cnt2_price2">15%</span> 12,000</li>
+                    <li>&#x2605; 4.8 (910)</li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="cnt2_gallery cnt2_5">
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_5_1.jpg" alt="이미지 1">
+                  <ul>
+                    <li>BEST 닦아 쓰는 화장솜</li>
+                    <li><span class="cnt2_price1">3,000</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.8 (6,095)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_5_2.jpg" alt="이미지 2">
+                  <ul>
+                    <li>BEST 패들 헤어 브러시</li>
+                    <li><span class="cnt2_price1">6,500</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.7 (2,890)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_5_3.jpg" alt="이미지 3">
+                  <ul>
+                    <li>BEST 스킨팩 전용 5겹 화장솜</li>
+                    <li><span class="cnt2_price1">4,500</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.8 (6,443)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_5_4.jpg" alt="이미지 4">
+                  <ul>
+                    <li>BEST 일반 화장솜</li>
+                    <li><span class="cnt2_price1">1,500</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.8 (16,752)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_5_5.jpg" alt="이미지 5">
+                  <ul>
+                    <li>BEST 크리미 버블 메이커</li>
+                    <li><span class="cnt2_price1">2,500</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.7 (140)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_5_6.jpg" alt="이미지 6">
+                  <ul>
+                    <li>BEST 브러시 & 퍼프 클렌저</li>
+                    <li><span class="cnt2_price1">10,000</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.4 (783)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_5_7.jpg" alt="이미지 7">
+                  <ul>
+                    <li>BEST 눈매 조각 브러시</li>
+                    <li><span class="cnt2_price1">8,000</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.7 (402)</li>
+                  </ul>
+                </a>
+              </li>
+              <li class="cnt2_b_1">
+                <a href="">
+                  <img src="./images/cnt2_5_8.jpg" alt="이미지 8">
+                  <ul>
+                    <li>BEST 미니 팩트 퍼프 (내장 겸용)</li>
+                    <li><span class="cnt2_price1">1,500</span> <span class="cnt2_price2"></span> </li>
+                    <li>&#x2605; 4.8 (3,890)</li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+        </nav>
+      </div>
+
+      <!-- 메인컨텐츠 3 -->
+      <div class="ad_banner">
+        <a href="#" title="광고 페이지 바로가기">
+          <div class="ad_left"></div>
+          <img src="./images/ad1.png" alt="광고배너">
+          <div class="ad_right"></div>
+        </a>
+      </div>
+
+      <!-- 메인컨텐츠 4 -->
+      <div class="limited_set">
+        <a href="#" title="홀리데이 한정판 세트 만나보기 페이지 바로가기">
+          <h2>홀리데이 한정판 세트 만나보기</h2>
+          <ul class="cnt4_gallery">
+            <li><img src="./images/cnt4_1.jpg" alt="이미지1">CHEEK</li>
+            <li><img src="./images/cnt4_2.jpg" alt="이미지1">LIP</li>
+            <li><img src="./images/cnt4_3.jpg" alt="이미지1">EYE</li>
+            <li><img src="./images/cnt4_4.jpg" alt="이미지1">COMPLEXION</li>
+          </ul>
+        </a>
+      </div>
+
+      <!-- 메인컨텐츠 5 -->
+      <div class="Shopping_benefits">
+        <a href="#" title="쇼핑 혜택 페이지 바로가기">
+          <h2>놓치면 안될 쇼핑 혜택</h2>
+        </a>
+        <nav class="cnt5_slide">
+          <ul>
+            <li class="sh_b_1"><a href="#" title=""><img src="./images/cnt5_slide1.jpg" alt="배너1"><span>겨울철 가려움, 각질
+                  고민<br>완벽 케어 솔루션!</span></a></li>
+            <li class="sh_b_2"><a href="#" title=""><img src="./images/cnt5_slide2.jpg" alt="배너2"><span>새해맞이!<br>안티에이징 홈
+                  케어 제품 추천</span></a></li>
+            <li class="sh_b_3"><a href="#" title=""><img src="./images/cnt5_slide3.jpg" alt="배너3"><span>돌아온 보습
+                  레전드<br>올리브 라인</span></a></li>
+            <li class="sh_b_4"><a href="#" title=""><img src="./images/cnt5_slide4.jpg" alt="배너4"><span>이니스프리 직원
+                  추천템<br>&#x0023;이니찐템</span></a></li>
+            <li class="sh_b_5"><a href="#" title=""><img src="./images/cnt5_slide5.jpg" alt="배너5"><span>반려견들을 위한 산책
+                  뷰티템<br>이니스프리 그린펫클럽</span></a></li>
+            <li class="sh_b_6"><a href="#" title=""><img src="./images/cnt5_slide6.jpg" alt="배너6"><span>이니스프리 FORM
+                  미쳤다!<br>이니스프리 클렌징폼</span></a></li>
+            <li class="sh_b_7"><a href="#" title=""><img src="./images/cnt5_slide7.jpg" alt="배너7"><span>눈여겨봐야 할<br>신상
+                  아이템! UTILITY BAG</span></a></li>
+          </ul>
+          <ul>
+            <img src="./images/cnt5_menu1.png" alt="메뉴1" id="slide_img">
+          </ul>
+        </nav>
+      </div>
+
+      <!-- 메인컨텐츠 6 -->
+      <div class="ad_banner2">
+        <a href="#" title="광고 페이지 바로가기">
+          <img src="./images/banner2.png" alt="광고 배너">
+        </a>
+      </div>
+    </main>
 
 
 
-  <!-- 푸터 영역 -->
-  <footer>
-    <div class="f_top">
-      <a href="index.html" title="메인페이지로 바로가기"><img src="./images/logo2.png" alt="하단로고"></a>
-      <li>
-        <a href="https://www.youtube.com/" title="유튜브 바로가기"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.instagram.com/" title="인스타그램 바로가기"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/" title="페이스북 바로가기"><i class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com/" title="트위터 바로가기"><i class="fab fa-twitter"></i></a>
-      </li>
-    </div>
+    <!-- 푸터 영역 -->
+    <footer>
+      <div class="f_top">
+        <a href="index.html" title="메인페이지로 바로가기"><img src="./images/logo2.png" alt="하단로고"></a>
+        <li>
+          <a href="https://www.youtube.com/" title="유튜브 바로가기"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/" title="인스타그램 바로가기"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/" title="페이스북 바로가기"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/" title="트위터 바로가기"><i class="fab fa-twitter"></i></a>
+        </li>
+      </div>
 
-    <div class="f_bottom">
-      <ul>
-        <li><a href="#" title="고객센터">고객센터</a></li>
-        <li><a href="#" title="개인정보처리방침"><span>개인정보처리방침</span></a></li>
-        <li><a href="#" title="이용약관">이용약관</a></li>
-      </ul>
-      <address>
-        <p>(주)이니스프리 서울특별시 용산구 이니스프리 대표이사 000</p>
-        <p>사업자 등록번호 000-00-00000 통신판매신고번호 0000-0000-0000</p>
-        <p>제품 문의 : 000-000-0000 FAX : 00-0000-0000</p>
-        <p>이메일 주소 innisfreezzang@.com 비즈니스제휴/입점문의</p>
-        <p>이메일 주소 무단 수집 거부 개인정보 보호책임자 정구화 호스팅 서비스 제공자</p>
-        <p>Copyright&copy;2024 by korea innisfreezzang corp. all rightes reserved.</p>
-      </address>
-    </div>
-  </footer>
-  <script>
-    $(document).ready(function(){
+      <div class="f_bottom">
+        <ul>
+          <li><a href="#" title="고객센터">고객센터</a></li>
+          <li><a href="#" title="개인정보처리방침"><span>개인정보처리방침</span></a></li>
+          <li><a href="#" title="이용약관">이용약관</a></li>
+        </ul>
+        <address>
+          <p>(주)이니스프리 서울특별시 용산구 이니스프리 대표이사 000</p>
+          <p>사업자 등록번호 000-00-00000 통신판매신고번호 0000-0000-0000</p>
+          <p>제품 문의 : 000-000-0000 FAX : 00-0000-0000</p>
+          <p>이메일 주소 innisfreezzang@.com 비즈니스제휴/입점문의</p>
+          <p>이메일 주소 무단 수집 거부 개인정보 보호책임자 정구화 호스팅 서비스 제공자</p>
+          <p>Copyright&copy;2024 by korea innisfreezzang corp. all rightes reserved.</p>
+        </address>
+      </div>
+    </footer>
 
+    <!-- 메인 스크립트 -->
+    <script src="./script/main.js"></script>
 
-      // 카테고리메뉴 
-
-      // 마우스 오버
-      let list = $('.sub > li > a');
-      list.hover(function(){ // 목록에 마우스 오버 시 == mouseover, mouseenter
-        $(this).animate({'font-size':'16px'}, 500);
-      },function(){ // 마우스 아웃 시 == mouseout, mouseleave
-        $(this).animate({'font-size':'14px'}, 500);
-      });
-
-      // 아코디언
-      // 1. 변수선언
-      const mnu = $('.h_bottom > .gnb > ul > li > a'); 
-
-      // 2. 메뉴 클릭 시 해당 서브 나오게 하기
-      mnu.click(function(){
-
-        // 2. 아코디언 메뉴
-        $('.sub').slideUp(); // 모든 서브메뉴를 위로 접고
-        $(this).next().slideDown(); //선택한 메뉴의 서브만 나오게 한다.
-        $('i').removeClass('act'); // 모든 i태그의 act서식을 제거하고
-        $(this).find('i').addClass('act'); // 선택한 메뉴의 자손 i태그에 act서식을 적용한다.
-
-      });
-
-
-      // 컨텐츠2 지금 제일 잘나가요
-
-      // 상단 내비게이션 제이쿼리
-      let cnt2 = $('.cnt2 > .cnt2_top > li > a');
-
-          cnt2.each(function(){
-            $(this).click(function(){
-              $(this).css('color','#000').css('background','#fff').css('border','1px solid #000').parent().siblings().find('a').css('color','#999E9C').css('background','#F5F5F5').css('border','1px solid #f5f5f5');
-              return false;
-            });
-          });
-
-
-          
-
-
-    });
-
-  </script>
 </body>
+
 </html>
